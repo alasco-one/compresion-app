@@ -1,7 +1,15 @@
 import queue
 import objects
 import ast
+import os
 
+
+def size_of(path):
+    """
+    docstring
+    Fonction qui permet de retourner la taille d'un fichier 
+    """
+    return os.stat(path).st_size
 
 def read_compressed_text(path):
     """

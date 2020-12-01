@@ -1,5 +1,6 @@
 import argparse
 import functions
+import time
 
 parser = argparse.ArgumentParser()
 
@@ -29,6 +30,8 @@ if args.decompress:
 else:
     #Case compression
 
+    begin = time.time()
+
     file_in = open(args.input, "r")
 
     table = functions.make_table(args.input,)
@@ -37,5 +40,9 @@ else:
     encoding_table =  a.encoding_table({})
 
     functions.compress(args.input, args.output, encoding_table)
+
+    end = time.time()
+    print("Ratio : {} %".format( int(functions.size_of(args.output)/functions.size_of(args.input) * 100 )))
+    print("Operation Time : {}".format(end - begin))
 
 
