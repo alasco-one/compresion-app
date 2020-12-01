@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity Compteur32b is
+	port (Clock_5M: in std_logic;
+			Count_Out : out std_logic_vector(31 downto 0)
+			);
+end entity;
+
+architecture Compteur of Compteur32b is
+
+signal count: std_logic_vector(31 downto 0);
+
+begin
+	process(Clock_5M)
+	
+	begin
+	
+		if rising_edge(Clock_5M) then
+			count <= count + 1;
+			
+		end if;
+		
+	end process;
+	
+	count_out <= count;
+
+end	Compteur;
