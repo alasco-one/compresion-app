@@ -1,5 +1,5 @@
 # compresion-app
-Une application qui permet de compresser/decompresser un fichier texte avec l'algorithme de Huffman
+Une application codée en **python** et qui permet de compresser/decompresser un fichier texte avec l'algorithme de Huffman.
 
 ## Utilisation  : 
 Pour utiliser le programme, on doit lui fournir deux argumments, le premier est le chemin du fichier en entré et le second est le nom du fichier en sortie. Les commandes sont : 
